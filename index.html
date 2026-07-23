@@ -42,12 +42,7 @@
 
   /* HERO */
   .hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:7rem 1.5rem 4rem;
-        background:#141414;}
-  /* placeholder de foto de fondo */
-  .hero .photo-ph{position:absolute;inset:0;background:
-      repeating-linear-gradient(45deg,#1a1a1a 0 22px,#161616 22px 44px);
-      display:flex;align-items:center;justify-content:center;}
-  .hero .photo-ph span{position:absolute;bottom:14px;right:16px;color:#555;font-size:.8rem;letter-spacing:2px;text-transform:uppercase;}
+        background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.68)),url('img/hero.jpg') center/cover no-repeat;}
   .hero .emblem{position:relative;z-index:2;width:min(440px,86vw);aspect-ratio:1;display:flex;align-items:center;justify-content:center;}
   .hero .emblem svg{position:absolute;inset:0;width:100%;height:100%;}
   .hero .emblem .arc-text{fill:#fff;font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:6px;}
@@ -86,11 +81,8 @@
   .btn-orange{display:inline-block;background:var(--orange);color:#fff;padding:.85rem 2rem;font-size:1.05rem;font-weight:500;letter-spacing:3px;text-transform:uppercase;border:1px solid rgba(255,255,255,.25);}
   .btn-orange:hover{background:#c9722c;}
 
-  /* PHOTO STRIP */
-  .strip{display:grid;grid-template-columns:repeat(6,1fr);gap:2px;}
-  @media(max-width:700px){.strip{grid-template-columns:repeat(3,1fr);}}
-  .strip .cell{aspect-ratio:1/1;background:repeating-linear-gradient(45deg,#1a1a1a 0 18px,#151515 18px 36px);display:flex;align-items:center;justify-content:center;}
-  .strip .cell span{color:#4d4d4d;font-size:.75rem;letter-spacing:1px;text-transform:uppercase;}
+  /* BANNER (foto real arriba de contacto) */
+  .banner{width:100%;height:min(58vh,520px);background:url('img/banner.jpg') center 38%/cover no-repeat;}
 
   /* CONTACT */
   .contact{background:var(--black);padding:4rem 0 3rem;}
@@ -133,7 +125,6 @@
 
 <!-- HERO -->
 <header class="hero" id="inicio">
-  <div class="photo-ph"><span>Foto del local (pendiente)</span></div>
   <div class="emblem">
     <svg viewBox="0 0 440 440" aria-hidden="true">
       <defs>
@@ -227,15 +218,8 @@
   </div>
 </section>
 
-<!-- PHOTO STRIP -->
-<div class="strip">
-  <div class="cell"><span>Foto</span></div>
-  <div class="cell"><span>Foto</span></div>
-  <div class="cell"><span>Foto</span></div>
-  <div class="cell"><span>Foto</span></div>
-  <div class="cell"><span>Foto</span></div>
-  <div class="cell"><span>Foto</span></div>
-</div>
+<!-- BANNER foto real -->
+<div class="banner"></div>
 
 <!-- CONTACT -->
 <section class="contact" id="contacto">
